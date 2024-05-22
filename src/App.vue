@@ -8,8 +8,10 @@
           <li><router-link to="/todos">Todos</router-link></li>
         </ul>
       </nav>
+      <slot name="navbar"></slot>
     </div>
     <router-view/>
+    <slot name="footer"></slot>
   </div>
 </template>
 

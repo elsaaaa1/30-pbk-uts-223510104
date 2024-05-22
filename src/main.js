@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router';
+import Main from './Main.vue';
+import router from './router'; // Pastikan Anda memiliki file router.js yang mengatur routing
 
-createApp(App).use(router).mount('#app');
+createApp(Main).use(router).mount('#app');
