@@ -1,12 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import ActivityList from '../components/ActivityList.vue';
-import Post from '../components/post.vue';
-import Todos from '../components/todos.vue';
+
+import Todos from '../views/Todos.vue';
+import Post from '../views/Post.vue';
+import Albums from '../views/Albums.vue';
+import Photos from '../views/Photos.vue';
 
 const routes = [
-  { path: '/', component: ActivityList },
-  { path: '/post', component: Post },
-  { path: '/todos', component: Todos },
+  {
+    path: '/',
+    name: 'Todos',
+    component: Todos,
+  },
+  {
+    path: '/posts',
+    name: 'Post',
+    component: Post,
+  },
+  {
+    path: '/albums',
+    name: 'Albums',
+    component: Albums,
+  },
+  {
+    path: '/albums/:id',
+    name: 'Photos',
+    component: Photos,
+  },
 ];
 
 const router = createRouter({
